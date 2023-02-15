@@ -9,9 +9,7 @@ describe("empty spec", () => {
   });
   it("TEST1", () => {
     cy.get("a[href='#/editor/']").click();
-    cy.get("input[placeholder='Article Title']").type(
-      "Cypress Hooks"
-    );
+    cy.get("input[placeholder='Article Title']").type("Cypress Hooks");
     cy.get('input[placeholder="What\'s this article about?"').type(
       "Introduction"
     );
@@ -19,7 +17,7 @@ describe("empty spec", () => {
       "Cypress is ana utomated web testing tool for testing web application components automatically."
     );
     cy.get("input[placeholder='Enter tags']").type("Cypress");
-    cy.screenshot({blackout:["input[placeholder='Article Title']"]})
+    cy.screenshot({ blackout: ["input[placeholder='Article Title']"] });
     cy.contains("button", "Publish Article").click();
     cy.contains("button", "Publish Article").click();
   });
